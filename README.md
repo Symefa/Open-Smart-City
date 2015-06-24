@@ -8,18 +8,17 @@ Open Smart City merupakan aplikasi web berbasis PHP yang berfungsi untuk *me-man
 
 ### Cara Instalasi ###
 
-* Dependencies : 
+Dependencies :
+ 
   * PHP 5.4 or later
   * MySQL 5.0 or later
-  
-* 
 
 
-### Contribution guidelines ###
+Instalasi :
 
-* Writing tests
-* Code review
-* Other guidelines
+  * Import database dari folder database
+  * Copy kontent yang ada di dalam src ke dalam web root anda atau folder installasi
+  * Ubah konfigurasi Open Smart City yang ada di dalam file libs/config.php
 
 ### Kontak Saya ###
 *Alifa Izzan*       
