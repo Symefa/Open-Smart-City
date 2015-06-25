@@ -30,7 +30,7 @@ Instalasi :
 
 **Partners:**
 
-* [Cybernature Project](http://www.cybernature.org/) 
+* [Cybernature Project](http://cybernature.org/) 
 
 **Specials Thanks to:** 
 
