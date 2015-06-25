@@ -2,7 +2,7 @@
 
 ### Apa itu Open Smart City? ###
 
-Open Smart City merupakan aplikasi web berbasis PHP yang berfungsi untuk *me-manage* keluhan masyarakat sebuah kota atau daerah dengan berbagai jenis atau kategori keluhan. Aplikasi ini sangat mudah dan effisien dalam memanage keluhan masyarakat. Aplikasi ini menggunakan MIT license baca LICENSE untuk info lebih lanjut.
+Open Smart City merupakan aplikasi web berbasis PHP yang berfungsi untuk *me-manage* keluhan masyarakat sebuah kota atau daerah dengan berbagai jenis atau kategori keluhan. Aplikasi ini sangat mudah dan effisien dalam *me-manage* keluhan masyarakat. Aplikasi ini menggunakan MIT license baca LICENSE untuk info lebih lanjut.
 
 **Version :** 1.0
 
