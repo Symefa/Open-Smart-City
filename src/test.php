@@ -1,8 +1,7 @@
 <?php
-session_start();
-$_SESSION = [
-	'username' => 'izzan',
-	'token'    => 'test',
-	];
-include('/libs/Session.php');
-?>
+
+$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+echo $path;
+if (strpos($path, '/help')) {
+    echo 'This is some help text.';
+}

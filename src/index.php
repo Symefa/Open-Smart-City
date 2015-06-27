@@ -1,25 +1,23 @@
 <?php
-/**
-*	Copyright Smalarobotics 2015
-*	Cybernature Project
-*	Alifa Izzan
-*/
 
-require_once 'Points.php';
+/**
+ *	Open Smart City Project.
+ */
+require_once 'libs/Points.php';
 require_once 'libs/Point.php';
-$Points = new Points();
+$Points = new Points(null);
 if (isset($_GET['action'])) {
-  $Array = $Points->getPoints();
-  echo json_encode($Array);
+    $Array = $Points->getPoints();
+    echo json_encode($Array);
 } else {
-	echo ' <!DOCTYPE html>
+    echo ' <!DOCTYPE html>
 <html>
 	<head>
-		<title>Surabaya Cybernature</title>
+		<title>'.$Points->getTitle().'</title>
 		<script type="text/javascript" src="http://www.google.com/jsapi?key='.$Points->getApi().'"></script>
-		<script type="text/javascript" src="exec.js"></script>
-		<link rel="stylesheet" type="text/css" href="main.css" media="screen"></link>
-		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="js/exec.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen"></link>
+		<script type="text/javascript" src="js/main.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -30,7 +28,7 @@ if (isset($_GET['action'])) {
 						<tr>
 						<td><ul id="keluhan">Keluhan Masyarakat</ul><ul id="list"></ul></td>
 						<td><div id="map"></div></td>
-						
+
 						</tr>
 						</table>
 					</div>
@@ -40,4 +38,5 @@ if (isset($_GET['action'])) {
 		</div>
 	</body>
 </html>'
-;}?>
+;
+}

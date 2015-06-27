@@ -1,12 +1,10 @@
 <?php
-/**
-*	Copyright Smalarobotics 2015
-*	Cybernature Project
-*	Alifa Izzan
-*/
+		   /*
+			*	Open Smart City Project
+			*/
 
 session_start();
-$conf = require __DIR__.'/../libs/config.php';
+$conf = require __DIR__.'/../conf/config.php';
 $dbJob = new PDO("mysql:host={$conf['dbHost']};dbname={$conf['dbName']}", $conf['dbUser'], $conf['dbPass']);
 
 if (isset($_POST['submit'])) {

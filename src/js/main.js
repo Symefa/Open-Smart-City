@@ -1,8 +1,6 @@
-/**
-*	Copyright Smalarobotics 2015
-*	Cybernature Project
-*	Alifa Izzan
-*/
+		  /**
+			*	Open Smart City Project
+			*/
 
 $(function(){
 				var map = new GMap2(document.getElementById('map'));
