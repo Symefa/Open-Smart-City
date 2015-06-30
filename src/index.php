@@ -4,24 +4,31 @@
  *	Open Smart City Project.
  */
 require_once 'libs/Points.php';
-require_once 'libs/Point.php';
-$Points = new Points(null);
-if (isset($_GET['action'])) {
-    $Array = $Points->getPoints();
-    echo json_encode($Array);
-} else {
-    echo ' <!DOCTYPE html>
+require_once 'libs/Main.php';
+require_once 'libs/Router.php';
+
+
+$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+
+Router::route($path,'listpoints', function(){
+	$Points = new Points();
+	echo json_encode($Points->getPoints());
+});
+
+
+echo ' <!DOCTYPE html>
 <html>
 	<head>
-		<title>'.$Points->getTitle().'</title>
-		<script type="text/javascript" src="http://www.google.com/jsapi?key='.$Points->getApi().'"></script>
+		<title>'.Main::getTitle().'</title>
+		<script type="text/javascript" src="http://www.google.com/jsapi?key='.Main::getApi().'"></script>
 		<script type="text/javascript" src="js/exec.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen"></link>
 		<script type="text/javascript" src="js/main.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
-			<div class="header"><center><h1>'.$Points->getTitle().'</h1></center></div>
+			<div class="header"><center><h1>'.Main::getTitle().'</h1></center></div>
 				<div class="content">
 					<div class="map wrapper">
 						<table>
@@ -39,4 +46,4 @@ if (isset($_GET['action'])) {
 	</body>
 </html>'
 ;
-}
+

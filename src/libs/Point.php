@@ -14,7 +14,7 @@ class Point
     public $urlFoto;
 
     //main construct
-    public function __construct($Id, $Name, $Latitude, $Longitude, $Keluhan, $UrlFoto)
+    public function __construct($Id, $Name, $Latitude, $Longitude, $Keluhan, $UrlFoto = null)
     {
         $this->id = $Id;
         $this->name = $Name;

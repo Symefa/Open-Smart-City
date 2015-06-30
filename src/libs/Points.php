@@ -7,14 +7,14 @@ require_once 'Point.php';
 
 class Points extends Point
 {
+    //Variable Declaration
     private $myArray = array();
     private $point;
     private $category;
-
     protected $conf;
     protected $dbJob;
 
-    public function __construct($category)
+    public function __construct($category = '*')
     {
         $this->category = $category;
         $this->conf = require __DIR__.'/../conf/config.php';
@@ -24,16 +24,6 @@ class Points extends Point
             $this->conf['dbPass']
         );
         $this->refresh();
-    }
-
-    public function getApi()
-    {
-        return $this->conf['ApiKey'];
-    }
-
-    public function getTitle()
-    {
-        return $this->conf['Title'];
     }
 
     public function addPoint($point)
@@ -59,11 +49,7 @@ class Points extends Point
         $stmt->execute();
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $foto = null;
-            if (isset($row['urlFoto'])) {
-                $foto = $row['urlFoto'];
-            }
-            $this->point = new Point($row['ID'], $row['Name'], $row['Latitude'], $row['Longitude'], $row['Keluhan'], $foto);
+            $this->point = new Point($row['ID'], $row['Name'], $row['Latitude'], $row['Longitude'], $row['Keluhan']);
             array_push($this->myArray, $this->point->toArray());
         }
     }
