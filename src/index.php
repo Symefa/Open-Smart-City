@@ -11,7 +11,7 @@ require_once 'libs/Router.php';
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 
-Router::route($path,'listpoints', function(){
+Router::route($path,'^\W+(listpoints)', function(){
 	$Points = new Points();
 	echo json_encode($Points->getPoints());
 });

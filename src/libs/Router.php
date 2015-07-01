@@ -7,10 +7,10 @@
        /*
         * Redirecting url to a function
         */
-        Public static function route($BASEURL, $URL, $functions)
+        Public static function route($BASEURL, $Regex, $functions)
         {
             //check the path
-            if (strpos($BASEURL, $URL))
+            if (preg_match($Regex, $BASEURL))
             {
                 //callback function
                 $functions();
