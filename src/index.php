@@ -3,19 +3,23 @@
 /**
  *	Open Smart City Project.
  */
-require_once 'libs/Points.php';
-require_once 'libs/Main.php';
-require_once 'libs/Router.php';
+require 'libs/Points.php';
+require 'libs/Main.php';
+require 'libs/AltoRouter.php';
 
-
-$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-
-
-Router::route($path,'^\W+(listpoints)', function(){
-	$Points = new Points();
+$router = new AltoRouter();
+$router->setBasePath('/opensmartcity/src/');
+$router->map( 'GET', 'listpoints', function() {
+    $Points = new Points();
 	echo json_encode($Points->getPoints());
+	exit();
 });
+        
+$match = $router->match();
 
+if( $match && is_callable( $match['target'] ) ) {
+	call_user_func_array( $match['target'], $match['params'] ); 
+}
 
 echo ' <!DOCTYPE html>
 <html>

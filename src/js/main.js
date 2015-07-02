@@ -20,7 +20,7 @@ $(function(){
 				reasons[G_GEO_SERVER_ERROR]       = "Server error";
 				
 				// load data maps
-				$.getJSON("index.php/listpoints", function(json) {
+				$.getJSON("listpoints", function(json) {
 					if (json.Locations.length > 0) {
 						for (i=0; i<json.Locations.length; i++) {
 							var location = json.Locations[i];
