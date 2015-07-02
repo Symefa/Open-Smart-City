@@ -1,34 +1,84 @@
-			/**
-			*	Open Smart City Project
-			*/
+/**
+*	Open Smart City Project
+*/
 			
-			#map { width:1000px; height:500px; }
-			#list { max-width:500px; background:	#DCDCDA; list-style:none; padding:0px; margin:0px;}
-			#list li { padding:10px;}
-			#list li.toggled {background:#888; color:#fff; cursor:pointer; cursor:hand;}
-			#list li:hover { background:#555; color:#fff; cursor:pointer; cursor:hand; }
-			#list span{padding:10px; background:#F4F4F2;height:100px;}
-			#message { font-weight:bold; font-size:12px; background:#555; color:#fff; position:absolute; display:none; width:100px; padding:5px; }
-			#normal {float:left; font-weight:normal; font-size:11px;}
-			#keluhan {padding-left: 23%; padding-right:23%;text-align:center; font-size: 20px ; font-weight:bold;}
-			#add-point { float:left; }
-			div.input { padding:3px 0; }
-			label { display:block; font-size:80%; }
-			input, select { width:150px; }
-			button { float:right; }
-			div.error { color:red; font-weight:bold; }
-			table{
-			border-spacing:1px; 
-			}
-			td{vertical-align:top;}
-			.content{
-			display:block;
-			width:100%;
-			}
-			.footer{
-			width:100%;
-			font-family: Helvetica;
-			font-size: 11px;
-			margin-top: 20px;
-			text-align: center;
-			}
+#map { 
+	width:1000px; 
+	height:500px; 
+}
+#list { 
+	max-width:500px; 
+	background:	#DCDCDA; 
+	list-style:none; 
+	padding:0px; 
+	margin:0px;
+}
+#list li { 
+	padding:10px;
+}
+#list li.toggled {
+	background:#888; 
+	color:#fff; 
+	cursor:pointer; 
+	cursor:hand;
+}
+#list li:hover { 
+	background:#555; 
+	color:#fff; 
+	cursor:pointer; 
+	cursor:hand; 
+}
+#list span{
+	padding:10px; 
+	background:#F4F4F2;
+	height:100px;
+}
+#message { 
+	font-weight:bold; 
+	font-size:12px; 
+	background:#555; 
+	color:#fff; 
+	position:absolute; 
+	display:none; 
+	width:100px; 
+	padding:5px; 
+}
+#normal {
+	float:left;
+	font-weight:normal; 
+	font-size:11px;
+}
+#keluhan {
+	padding-left: 23%; 
+	padding-right:23%;
+	text-align:center; 
+	font-size: 20px ; 
+	font-weight:bold;
+}
+#add-point { 
+	float:left; 
+}
+div.input { 
+	padding:3px 0; 
+}
+label { 
+	display:block; 
+	font-size:80%; 
+}
+table{
+	border-spacing:1px; 
+}
+td{
+	vertical-align:top;
+}
+.content{
+	display:block;
+	width:100%;
+}
+.footer{
+	width:100%;
+	font-family: Helvetica;
+	font-size: 11px;
+	margin-top: 20px;
+	text-align: center;
+}
