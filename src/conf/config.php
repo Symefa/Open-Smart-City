@@ -23,6 +23,4 @@ return [
         Application Settings
         */
         'Title' => 'Surabaya Cybernature',
-        'username' => 'cybernature',
-        'password' => 'helloworld',
 ];

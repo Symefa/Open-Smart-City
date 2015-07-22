@@ -13,6 +13,8 @@ Dependencies :
   * PHP 5.4 or later
   * MySQL 5.0 or later
 
+Included Libs :
+  * [dannyvankooten/AltoRouter](http://altorouter.com/)
 
 Instalasi :
 
