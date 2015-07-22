@@ -15,34 +15,40 @@ else
 {
 	$username = $_POST['username'];
 	$password = $_POST['password'];
-	
-	if(password_verify($password, password_hash($conf['password'],PASSWORD_DEFAULT)&&password_verify($username,password_hash($conf['username'],PASSWORD_DEFAULT))
+	$dbJob = $dbJob->prepare("SELECT * FROM user WHERE username = :username");
+	$dbJob->bindParam(':username', $username);
+	$dbJob->execute();
+	$row = $dbJob->fetch(PDO::FETCH_ASSOC);
+
+	if ($dbJob->rowCount() != 0)
 	{
-		$keytoken = rand(0,1000);
-		$token = password_hash($keytoken, PASSWORD_DEFAULT);
-		$dbJob = $dbJob->prepare("SELECT * FROM session WHERE username = :username");
-		$dbJob->bindParam(':username', $username);
-		$dbJob->execute();
-		
-		if ($dbJob->rowCount() > 0)
-		{
-			$dbJob = $dbJob->prepare("UPDATE session SET username = :name, key_token = :key");
-			$dbJob->bindParam(':name', $username);
-			$dbJob->bindParam(':key' , $token);	
-		}
-		else
-		{
-			$dbJob = $dbJob->prepare("INSERT INTO session (username,key_token) VALUES(:name, :key)");
-			$dbJob->bindParam(':name', $username);
-			$dbJob->bindParam(':key' , $token);
-		}	
-		
-		$dbJob->execute();
-		
-		$_SESSION = [
-		'username' => $username, 'token' => $token,
-		];
-		header("Location: admin");
+		continue;
+	}
+	else if(password_verify($password,$row[2]))
+	{
+        $keytoken = rand(0,1000);
+	    $token = password_hash($keytoken, PASSWORD_DEFAULT);
+	    $dbJob = $dbJob->prepare("SELECT * FROM session WHERE username = :username");
+	    $dbJob->bindParam(':username', $username);
+	    $dbJob->execute();
+
+	    if ($dbJob->rowCount() > 0)
+	    {
+		    $dbJob = $dbJob->prepare("UPDATE session SET username = :name, key_token = :key");
+		    $dbJob->bindParam(':name', $username);
+		    $dbJob->bindParam(':key' , $token);	
+	    }
+	    else
+	    {
+		    $dbJob = $dbJob->prepare("INSERT INTO session (username,key_token) VALUES(:name, :key)");
+		    $dbJob->bindParam(':name', $username);
+		    $dbJob->bindParam(':key' , $token);
+	    }	
+	
+	    $dbJob->execute();
+
+	    $_SESSION = ['username' => $username, 'token' => $token,];
+	    header("Location: admin");
 	}
 	else
 	{
