@@ -30,10 +30,10 @@ $(function(){
                 var location = json.Locations[i];
                 
                 addLocation(location);
+            }
+            zoomToBounds();
         }
-        zoomToBounds();
     });
-
     $("#add-point").submit(function(){
         geoEncode();
         return false;

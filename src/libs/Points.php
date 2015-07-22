@@ -45,9 +45,16 @@ class Points extends Point
     public function refresh()
     {
         $this->myArray = array();
-        $stmt = $this->dbJob->prepare('SELECT * FROM Locations');
+        if ($this->category =='*')
+        {
+            $stmt = $this->dbJob->prepare('SELECT * FROM Locations');
+        }
+        else 
+        {
+            $stmt = $this->dbJob->prepare('SELECT * FROM Locations WHERE Category = :category');
+            $stmt->bindParam(':category',$this->category);
+        }
         $stmt->execute();
-
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $this->point = new Point($row['ID'], $row['Name'], $row['Latitude'], $row['Longitude'], $row['Keluhan']);
             array_push($this->myArray, $this->point->toArray());
