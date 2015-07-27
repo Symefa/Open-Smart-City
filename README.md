@@ -60,4 +60,4 @@ Instalasi :
 ### Kontak Saya ###
 *Alifa Izzan*       
 
-alfizzanakhsani@gmail.com
+izzan@kakatoagames.com
