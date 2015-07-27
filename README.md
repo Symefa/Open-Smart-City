@@ -24,13 +24,6 @@ Instalasi :
   * Ubah konfigurasi Open Smart City yang ada di dalam file libs/config.php
 
 ### Credits ###
-
-**Project Leader:** Alifa Izzan
-
-**Developers:** 
-
-* Surya Widi
-
 **Partners:**
 
 * [Cybernature Project](http://cybernature.org/) 
