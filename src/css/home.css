@@ -1,0 +1,268 @@
+body {
+  color: #525252;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.pointer {
+ cursor: pointer;
+}
+
+.flex {
+ display: inline-flex;
+ padding-top: 19px;
+}
+
+.space {
+  padding-left: 6px;
+  padding-right: 0px;
+}
+
+.tab {
+  padding-left: 10px;
+  padding-right: 0px;
+}
+
+.right {
+  float: right;
+}
+
+.hover:hover {
+  color:  #47c9af;
+}
+
+.city {
+  color:  #479C8B;
+}
+
+.city:hover {
+  color:  #7EBAAE;
+}
+
+nav.main {
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  z-index: 999;
+  top: 0;
+  position: fixed;
+}
+
+#menu,
+#menu ul li,
+#menu ul li a{
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0px;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#menu ul{
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 10px;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#menu ul li a:nth-child(2){
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 6px;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#menu ul li:nth-child(2){
+margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 10px;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#menu:after,
+#menu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+#menu {
+  width: auto;
+  border-bottom: 3px solid #47c9af;
+  font-family: sans-serif;
+  line-height: 1;
+}
+
+#menu ul {
+  background: #ffffff;
+}
+
+#menu > ul > li {
+  float: left;
+}
+
+#menu.align-center > ul {
+  font-size: 0;
+  text-align: center;
+}
+
+#menu.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+
+#menu.align-right > ul > li {
+  float: right;
+}
+
+#menu.align-right > ul > li > a {
+  margin-right: 0;
+  margin-left: -4px;
+}
+
+#menu > ul > li > a {
+  z-index: 2;
+  padding: 18px 25px 12px 25px;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #444444;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  margin-right: -4px;
+}
+
+#menu > ul.menu > li.menu.active > a,
+#menu > ul.menu > li.menu:hover > a,
+#menu > ul.menu > li.menu > a:hover {
+  color: #ffffff;
+}
+
+#menu > ul.menu > li.menu > a:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 120%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  content: "";
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+#menu > ul.menu > li.menu.active > a:after,
+#menu > ul.menu > li.menu:hover > a:after,
+#menu > ul.menu > li.menu > a:hover:after {
+  background: #47c9af;
+}
+
+#map-canvas {
+  height: 100%;
+}
+
+.map > .map-container {
+  height: 100vh;
+}
+
+.map > .list {
+  z-index: 1;
+  box-shadow: 2px 0 5px -2px rgba(0,0,0,.26);
+  background-color: #f9f9f9;
+}
+
+.map > .list > .item {
+  margin-top: 10px;
+}
+
+.map > .list > .item {
+  margin: 1em;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.map > .list > .item:hover {
+  background-color:#A3E4D7;
+}
+
+.map > .list > .item h3 {
+  margin: 0;
+  text-transform: uppercase;
+  color: #444;
+  font-weight: normal;
+}
+
+.map > .list > .item p {
+  color: #555;
+  margin: 12px 15px;
+}
+
+#message { 
+  font-weight:bold; 
+  font-size:12px; 
+  background:#555; 
+  color:#fff; 
+  position:absolute; 
+  display:none; 
+  width:100px; 
+  padding:5px; 
+}
+
+#normal {
+  float:left; 
+  font-weight:normal; 
+  font-size:11px;
+}
+@media only screen and (max-width : 768px) {
+  .map > .list {
+    display: none;
+  }
+  .map > .map-container {
+    width: 100%;
+  }
+}
