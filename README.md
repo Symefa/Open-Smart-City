@@ -6,7 +6,7 @@ Open Smart City merupakan aplikasi web berbasis PHP yang berfungsi untuk *me-man
 
 **Version :** 1.0
 
-### Cara Instalasi ###
+### Details ###
 
 Dependencies :
  
