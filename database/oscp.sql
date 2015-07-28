@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2015 at 09:24 AM
+-- Generation Time: Jul 27, 2015 at 07:14 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `locations` (
   `ID` int(11) NOT NULL,
-  `Name` varchar(20) NOT NULL,
+  `Name` varchar(50) NOT NULL,
   `Latitude` varchar(20) NOT NULL,
   `Longitude` varchar(20) NOT NULL,
   `Keluhan` varchar(1000) NOT NULL
@@ -40,9 +40,9 @@ CREATE TABLE IF NOT EXISTS `locations` (
 
 INSERT INTO `locations` (`ID`, `Name`, `Latitude`, `Longitude`, `Keluhan`) VALUES
 (1, 'SMAN 5 Surabaya', '-7.256629', '112.750294', 'Keran Air Bocor'),
-(2, 'Taman Prestasi', '-7.262413', '112.744918', 'Fasilitas Bermain Rusak'),
-(3, 'SMPN 1 Surabaya', '-7.257344', '112.747711', 'Kaca rusak semua'),
-(4, 'Rumah Dhony', '-7.308917', '112.728498', 'Banyak penjual nasi goreng liar');
+(2, 'Jl. Slamet', '-7.259600', '112.749905', 'Banyak jalan yang berlubang'),
+(3, 'Jl. Ambengan', '-7.256073', '112.751646', 'Banyak pengendara yang tidak tertib'),
+(4, 'Taman Remaja Surabaya', '-7.253618', '112.750982', 'Banyak fasilitas yang rusak');
 
 -- --------------------------------------------------------
 
