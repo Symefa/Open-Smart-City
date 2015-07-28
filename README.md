@@ -17,11 +17,11 @@ Included Libs :
   
   * [dannyvankooten/AltoRouter](http://altorouter.com/)
 
-Instalasi :
-
-  * Import database dari folder database
-  * Copy kontent yang ada di dalam src ke dalam web root anda atau folder installasi
-  * Ubah konfigurasi Open Smart City yang ada di dalam file libs/config.php
+Proses Pengembangan :
+  * Core       : 13%
+  * Interface  : 5%
+  * API        : 0%
+  * Others     : ~1%
 
 ### Credits ###
 **Partners:**
