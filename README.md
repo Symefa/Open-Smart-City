@@ -27,6 +27,7 @@ Proses Pengembangan :
 **Partners:**
 
 * [Cybernature Project](http://cybernature.org/) 
+* [Smalane Network](http://smalane.com/) 
 
 **Specials Thanks to:** 
 
