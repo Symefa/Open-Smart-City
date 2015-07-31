@@ -1,28 +1,25 @@
 <?php
-    /*
-     *	Open Smart City Project
-     */
 
-    
-    class Main
+/*
+*	Open Smart City Project
+*/
+
+class Main
+{
+    protected static $conf;
+    public static function init()
     {
-        static protected $conf;
-
-        public static function init()
-        {
-            self::$conf = require __DIR__.'/../conf/config.php';
-        }
-
-        public static function getApi()
-        {
-            return self::$conf['ApiKey'];
-        }
-
-        public static function getTitle()
-        {
-            return self::$conf['Title'];
-        }
+        self::$conf = require __DIR__.'/../conf/config.php';
     }
-    Main::init();
 
-?>
+    public static function getApi()
+    {
+        return self::$conf['ApiKey'];
+    }
+
+    public static function getTitle()
+    {
+        return self::$conf['Title'];
+    }
+}
+Main::init();

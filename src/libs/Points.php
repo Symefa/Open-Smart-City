@@ -3,7 +3,7 @@
 /**
  *	Open Smart City Project.
  */
-require_once 'Point.php';
+require 'Point.php';
 
 class Points extends Point
 {
@@ -45,14 +45,11 @@ class Points extends Point
     public function refresh()
     {
         $this->myArray = array();
-        if ($this->category =='*')
-        {
+        if ($this->category == '*') {
             $stmt = $this->dbJob->prepare('SELECT * FROM Locations');
-        }
-        else 
-        {
+        } else {
             $stmt = $this->dbJob->prepare('SELECT * FROM Locations WHERE Category = :category');
-            $stmt->bindParam(':category',$this->category);
+            $stmt->bindParam(':category', $this->category);
         }
         $stmt->execute();
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {

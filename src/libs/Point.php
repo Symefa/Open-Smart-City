@@ -1,8 +1,9 @@
 <?php
 
-/**
+/*
  *	Open Smart City Project.
  */
+
 class Point
 {
     //variable

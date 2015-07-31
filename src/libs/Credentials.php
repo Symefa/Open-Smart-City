@@ -1,10 +1,8 @@
 <?php
 
-
-
-           /*
-            *	Open Smart City Project
-            */
+/*
+ *	Open Smart City Project
+ */
 
 $conf = require __DIR__.'/../conf/config.php';
 
