@@ -54,4 +54,4 @@ Proses Pengembangan :
 ### Kontak Saya ###
 *Alifa Izzan*       
 
-izzan@kakatoagames.com
+izzan@smalane.com
